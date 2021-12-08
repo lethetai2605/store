@@ -18,5 +18,19 @@
   <%= @item.user.name %>
 </p>
 
+<p>
+  <strong>Telephone:</strong>
+  <%= @item.user.telephone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @item.user.address %>
+</p>
+
+<p>
+  <%= image_tag @item.display_image if @item.image.attached? %>
+</p>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

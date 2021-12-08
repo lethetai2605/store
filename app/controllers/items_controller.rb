@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
   def create
     # @item = Item.new(item_params) ~ load_and_authorize_resource
     @item.user_id = current_user.id
+    @item.image.attach(params[:item][:image])
     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
     else
@@ -55,6 +56,6 @@ class ItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:name, :description, :price, :user_id)
+      params.require(:item).permit(:name, :description, :price, :user_id, :image)
     end
 end

@@ -27,6 +27,16 @@
   </div>
 
   <div class="field">
+    <%= form.label :telephone %><br>
+    <%= form.text_field :telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %><br>
+    <%= form.text_area :address, size: '30x5' %>
+  </div>
+
+  <div class="field">
     <%= form.label :role_id %>
     <%= collection_select(
           :user, :role_id, Role.all, :id, :name, { prompt: true }

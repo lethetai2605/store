@@ -79,7 +79,9 @@ class UsersController < ApplicationController
         :password,
         :password_confirmation,
         :name,
-        :role_id
+        :role_id,
+        :telephone,
+        :address
       )
     end
 
