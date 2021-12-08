@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
 
   # GET /items/1
   def show
+    @item_review = ItemReview.new
   end
 
   # GET /items/new

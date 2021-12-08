@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-
+  has_many :item_review, -> { order(created_at: :desc) }
   validates :image, content_type: { in: %w[image/jpeg image/gif image/png],
                     message: 'must be a valid image format' },
                     size: { less_than: 5.megabytes,

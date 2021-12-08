@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :item_reviews
   authenticated :user do
     root to: 'items#index', as: :authenticated_root
   end

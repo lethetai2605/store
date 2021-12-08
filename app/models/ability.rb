@@ -8,6 +8,7 @@ class Ability
     if user.admin?
       can :manage, :all
     elsif user.seller?
+      can :create, ItemReview
       can :read, Item
       can :create, Item
       can :update, Item do |item|
@@ -18,6 +19,7 @@ class Ability
       end
     elsif user.regular?
       can :read, Item
+      can :create, ItemReview
     end
   end
 end
