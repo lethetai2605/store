@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :trackable
   belongs_to :role, optional: true
   has_many :items, dependent: :destroy
+  has_many :item_review, dependent: :destroy
   validates :name, presence: true
   before_save :assign_role
 

@@ -45,10 +45,10 @@
 
 <strong>Review List</strong>
 <dl>
-  <% @item.item_review.each do |book_review|%>
-    <dt><b><%= book_review.user.name %></b></dt>
-    <dd>- <%= book_review.review %>
-     <i><%= time_ago_in_words(book_review.created_at) %> ago.</i>
+  <% @item.item_review.each do |item_review|%>
+    <dt><b><%= item_review.user.name %></b></dt>
+    <dd>- <%= item_review.review %>
+     <i><%= time_ago_in_words(item_review.created_at) %> ago.</i>
     </dd>
   <% end %>
 </dl>
