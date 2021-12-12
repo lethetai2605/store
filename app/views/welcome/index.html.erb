@@ -1,8 +1,21 @@
 <h1>Welcome to the Store!</h1>
-<h2>Selling you things you don't need since 2020</h2>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-  eveniet, repellat quae sed hic obcaecati nam exercitationem saepe
-  quod totam dolore explicabo culpa iure deserunt? Dignissimos, fuga,
-  adipisci. Temporibus, aliquid.
-</p>
+<h2>Selling you things you  need since 2021</h2>
+<br>
+<h2>IT日本語３ープロジェクト</h2>
+<h2>チーム２</h2>
+<ul>
+  <li>Le The Tai (20184190)</li>
+  <li>Dao Manh Thang (20184193)</li>
+  <li>Nguyen Ba Luan (20184147)</li>
+  <li>Hoang Tien Dat (20184059)</li>
+  <li>Lai Minh Phuc (20184173)</li>
+</ul>
+<br>
+<h3>
+Contact: <br>
+    <% @admins.each do |user| %>
+      <ul style="list-style: none;">
+        <li><%= user.name %> - Tele: <%= user.telephone %></li>
+      </ul>
+    <% end %>
+</h3>

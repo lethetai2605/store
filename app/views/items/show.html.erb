@@ -29,10 +29,10 @@
 </p>
 
 <p>
-  <%= image_tag @item.display_image if @item.image.attached? %>
+  <%= image_tag @item.display_image if @item.image.attached?%>
 </p>
 
-<strong>Review From</strong>
+<strong>Comment From</strong>
  <%= form_with(model: @item_review, local: true) do |form| %>
    <div class= "field">
      <%= form.text_area :review %>
@@ -43,7 +43,7 @@
    </div>
  <% end %>
 
-<strong>Review List</strong>
+<strong>Comment List</strong>
 <dl>
   <% @item.item_review.each do |item_review|%>
     <dt><b><%= item_review.user.name %></b></dt>
